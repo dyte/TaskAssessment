@@ -31,7 +31,7 @@ class UserQueryServiceImplTest {
     @Test
     public void getUserByIdSuccessfullyTest() {
 
-        User expectedUser = UserDataFactory.generateUser("Name", "Surname");
+        User expectedUser = UserDataFactory.generateUser("Name", "Surname", "UserName");
         expectedUser.setDeleted(false);
         expectedUser.setId(1L);
         expectedUser.setCreateDate(LocalDateTime.now());

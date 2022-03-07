@@ -21,6 +21,7 @@ public class User extends BaseEntity<User, UserDTO> {
 
     private String name;
     private String surName;
+    private String userName;
 
     @Override
     public boolean equals(Object o) {
@@ -31,12 +32,15 @@ public class User extends BaseEntity<User, UserDTO> {
             return false;
         }
         User user = (User) o;
-        return Objects.equals(getName(), user.getName()) && Objects.equals(getSurName(), user.getSurName());
+        return
+                Objects.equals(getName(), user.getName()) &&
+                Objects.equals(getSurName(), user.getSurName()) &&
+                Objects.equals(getUserName(), user.getUserName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getSurName());
+        return Objects.hash(getName(), getSurName(), getUserName());
     }
 
     @Override
@@ -44,6 +48,7 @@ public class User extends BaseEntity<User, UserDTO> {
         return "User{" +
                 "name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
+                ", userName='" + userName + '\'' +
                 ", id='" + getId() + '\'' +
                 ", createDate='" + getCreateDate() + '\'' +
                 ", updateDate='" + getUpdateDate() + '\'' +

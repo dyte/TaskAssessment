@@ -14,12 +14,14 @@ public class UserDTO extends BaseApiDTO {
 
     private String name;
     private String surName;
+    private String userName;
 
     @Override
     public String toString() {
         return "UserDTO{" +
                 "name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }

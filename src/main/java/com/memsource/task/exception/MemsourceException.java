@@ -1,10 +1,10 @@
 package com.memsource.task.exception;
 
-public class MemsourceException extends RuntimeException {
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-    public MemsourceException () {
-        super();
-    }
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+public class MemsourceException extends RuntimeException {
 
     public MemsourceException (String message) {
         super(message);
@@ -12,9 +12,5 @@ public class MemsourceException extends RuntimeException {
 
     public MemsourceException (String message, Throwable cause) {
         super(message, cause);
-    }
-
-    protected MemsourceException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

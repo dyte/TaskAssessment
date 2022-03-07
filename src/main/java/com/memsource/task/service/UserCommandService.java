@@ -5,4 +5,5 @@ import com.memsource.task.dto.UserDTO;
 public interface UserCommandService {
 
     UserDTO create(UserDTO userDTO);
+    UserDTO update(UserDTO userDTO);
 }
